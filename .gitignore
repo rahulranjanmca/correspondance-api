@@ -67,8 +67,6 @@ dist/
 dist
 dist/*
 
-#.env files, define locally, do not check into source control - related to npm library dotenv-safe
-*.env
 
 # jsdoc output
 doc/
