@@ -1,0 +1,5 @@
+queue: Hosted VS2019
+
+steps:
+
+- script: echo hello world

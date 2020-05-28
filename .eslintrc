@@ -1,0 +1,3 @@
+{
+  "extends": ["@wellmark/eslint-config-typescript-linter-parser"]
+}
