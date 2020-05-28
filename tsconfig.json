@@ -1,0 +1,42 @@
+{
+  "allowSyntheticDefaultImports": true,
+  "compileOnSave": true,
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "declaration": true,
+    "declarationDir": "dist",
+    "declarationMap": true,
+    "emitDecoratorMetadata": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "lib": [
+      "es2019"
+    ],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "outDir": "dist",
+    "preserveConstEnums": true,
+    "pretty": true,
+    "removeComments": false,
+    "rootDir": ".",
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "strict": true,
+    "target": "es2019",
+  },
+  "esModuleInterop": true,
+  "exclude": [
+    "dist",
+    "node_modules",
+    "./src/index.local.ts"
+  ],
+  "include": [
+    "./src/**/*"
+  ]
+}

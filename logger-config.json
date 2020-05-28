@@ -1,0 +1,82 @@
+{
+  "ONPREM": {
+    "default": {
+      "WML_CLOUDWATCH_PUSH_ENABLED": false,
+      "WML_CLOUDWATCH_LOG_LEVEL": "trace",
+      "WML_CONSOLE_ENABLED": false,
+      "WML_CONSOLE_LOG_LEVEL": "trace",
+      "WML_CONSOLE_COLOR_ENABLED": false,
+      "WML_ENABLE_INIT_CONSOLE_LOGGING": true
+    },
+    "LOCAL": {
+      "WML_CONSOLE_ENABLED": true,
+      "WML_CONSOLE_LOG_LEVEL": "debug",
+      "WML_CONSOLE_COLOR_ENABLED": true
+    },
+    "DEV": {
+      "WML_CONSOLE_ENABLED": true,
+      "WML_CONSOLE_LOG_LEVEL": "trace"
+    },
+    "SIT": {
+      "WML_CONSOLE_ENABLED": true,
+      "WML_CONSOLE_LOG_LEVEL": "trace"
+    },
+    "UAT": {
+      "WML_CONSOLE_ENABLED": true,
+      "WML_CONSOLE_LOG_LEVEL": "trace"
+    },
+    "PROD": {
+      "WML_CONSOLE_ENABLED": true,
+      "WML_CONSOLE_LOG_LEVEL": "trace"
+    },
+    "PREP": {
+      "WML_CONSOLE_ENABLED": true,
+      "WML_CONSOLE_LOG_LEVEL": "trace"
+    }
+  },
+  "AWS": {
+    "default": {
+      "WML_CLOUDWATCH_PUSH_ENABLED": false,
+      "WML_CLOUDWATCH_LOG_LEVEL": "trace",
+      "WML_CONSOLE_ENABLED": false,
+      "WML_CONSOLE_LOG_LEVEL": "trace",
+      "WML_CONSOLE_COLOR_ENABLED": false,
+      "WML_ENABLE_INIT_CONSOLE_LOGGING": true
+    },
+    "LOCAL": {
+      "WML_CONSOLE_ENABLED": true,
+      "WML_CONSOLE_LOG_LEVEL": "debug",
+      "WML_CONSOLE_COLOR_ENABLED": true
+    },
+    "DEV": {
+      "WML_CLOUDWATCH_PUSH_ENABLED": true,
+      "WML_CLOUDWATCH_LOG_LEVEL": "trace",
+      "WML_CONSOLE_ENABLED": true,
+      "WML_CONSOLE_LOG_LEVEL": "trace"
+    },
+    "SIT": {
+      "WML_CLOUDWATCH_PUSH_ENABLED": true,
+      "WML_CLOUDWATCH_LOG_LEVEL": "debug",
+      "WML_CONSOLE_ENABLED": true,
+      "WML_CONSOLE_LOG_LEVEL": "debug"
+    },
+    "UAT": {
+      "WML_CLOUDWATCH_PUSH_ENABLED": true,
+      "WML_CLOUDWATCH_LOG_LEVEL": "debug",
+      "WML_CONSOLE_ENABLED": true,
+      "WML_CONSOLE_LOG_LEVEL": "debug"
+    },
+    "PREP": {
+      "WML_CONSOLE_ENABLED": true,
+      "WML_CONSOLE_LOG_LEVEL": "error",
+      "WML_CLOUDWATCH_PUSH_ENABLED": true,
+      "WML_CLOUDWATCH_LOG_LEVEL": "error"
+    },
+    "PROD": {
+      "WML_CONSOLE_ENABLED": true,
+      "WML_CONSOLE_LOG_LEVEL": "error",
+      "WML_CLOUDWATCH_PUSH_ENABLED": true,
+      "WML_CLOUDWATCH_LOG_LEVEL": "error"
+    }
+  }
+}
