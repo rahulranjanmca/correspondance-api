@@ -1,0 +1,58 @@
+pool:
+  name: DEVDeploymentPool
+  demands: agent.os -equals linux
+variables:
+  imageName: '$(Build.Repository.Name):$(Build.BuildNumber)'
+steps:
+- task: NodeTool@0
+  displayName: 'Use Node 8.10'
+  inputs:
+    versionSpec: 8.10
+
+- script: 'set NODE_OPTIONS=--old-max-space-size=8192'
+  displayName: 'set NODE_OPTIONS'
+
+- task: Npm@1
+  displayName: 'Install Testing Dependencies'
+  inputs:
+    verbose: false
+
+- task: Gulp@0
+  displayName: 'Gulp - Build, Lint, Compress, Install'
+  inputs:
+    targets: build
+
+- task: Npm@0
+  displayName: 'Clean Modules And Tailor Dynatrace'
+  inputs:
+    cwd: '$(Build.Repository.LocalPath)/dist'
+    command: run
+    arguments: modclean
+
+- task: CopyFiles@2
+  displayName: 'Copy Dist to Staging'
+  inputs:
+    SourceFolder: '$(Build.Repository.LocalPath)/dist'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+
+- task: ArchiveFiles@2
+  displayName: 'Archive Build'
+  inputs:
+    rootFolderOrFile: '$(Build.ArtifactStagingDirectory)'
+    includeRootFolder: false
+    archiveFile: '$(Build.ArtifactStagingDirectory)/dist.zip'
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifact: Build'
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)/dist.zip'
+    ArtifactName: Build
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifact:  .env.example'
+  inputs:
+    PathtoPublish: .env.example
+    ArtifactName: Build
+
+- task: mspremier.PostBuildCleanup.PostBuildCleanup-task.PostBuildCleanup@3
+  displayName: 'Clean Agent Directories'
