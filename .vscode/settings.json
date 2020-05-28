@@ -1,0 +1,34 @@
+{
+  "editor.formatOnSave": true,
+  "eslint.autoFixOnSave": true,
+  "eslint.validate": [
+    "javascript",
+    {
+      "language": "typescript",
+      "autoFix": true
+    }
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "cSpell.words": [
+    "CRMWBI",
+    "jiangyuetest",
+    "mailroom",
+    "mongod",
+    "nestjs",
+    "sccf",
+    "typeorm",
+    "wellmark"
+  ],
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "coverage": true,
+    "dist": true,
+    "temp": true
+  }
+}
